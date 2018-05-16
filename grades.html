@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>grades</title>
+<style>
+body{
+	background-color:navy;
+}
+.button:hover{
+	background:#ffa500;
+	border:none;
+	color:white;
+	padding:15px 32px;
+	position:center;
+	text-align:center;
+cursor:pointer;
+box-shadow:0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.flex-container{
+	font-family: Sans-serif;
+	display: -webkit -flex;
+	display: flex;
+	position: center;
+	width: 400px;
+	height: 250px;
+	background-color: lightgrey;
+	padding: 20px;
+}
+.button{
+	display: inline-block;
+	border-radius: 4px;
+	border: none;
+	text-align: center;
+	font-size: 28px;
+	padding: 20px;
+	width: 200px;
+	cursor: pointer;
+	margin: 5px;
+}
+.button span{
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+}
+.button span:after{
+	content: '\00bb';
+	position: absolute;
+	top: 0;
+	right: -20px;
+}
+</style>
+<script>
+	function calculate()
+	{
+	var cgpa=document.getElementById("cgpa").value;
+	var result=document.getElementById("result");
+	alert(result.innerHTML="Percentage="+(cgpa*9.5));
+	}
+</script>
+</head>
+<body style="background color: #000033;">
+<body>
+<div style="background-color:black;color:FF3300;padding:10px;">
+<h1 style="font-family:verdana;"><font color=aqua>PresiTalks</font><center><font color=#FF4500>GRADES</font></center></h1></div>
+<marquee><h3><font color=#FA8072>***** Click here to check your results *****</font></h3></marquee>
+<a href="https://202.71.153.98/KnowledgePro/StudentLogin.do">
+<center><button class="button:hover">CLICK HERE</button></center>
+</a><br><br>
+<center>
+	<div class="flex-containter">
+	<div><center><h2> Convert your CGPA to Percentage !!! </h2></center></div>
+	<form><br><br>
+	CGPA : <input id="cgpa">
+	<br>
+	<button class="button" style="vertical-align:middle" onclick="calculate()"><span> SUBMIT </span></button>
+	<p id="result">		</p>
+	</form>
+	</div>
+</center>
+</body>
+</html>
